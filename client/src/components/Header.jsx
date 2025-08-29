@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import logo from '../images/logo.png'
 
 function Header() {
   const [open, setOpen] = useState(false)
@@ -25,7 +26,11 @@ function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <a href="#" className="inline-flex items-center gap-3">
-            <div className="h-8 w-8 rounded bg-blue-600" />
+            <img 
+              src={logo} 
+              alt="BrandenBed Logo" 
+              className="h-10 w-auto object-contain"
+            />
             <span className="text-2xl font-extrabold tracking-tight text-gray-900">BrandenBed</span>
           </a>
 
