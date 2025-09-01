@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "property": "Green Villa",
+    "tenant": "Jane Smith",
+    "amount": "5",
+    "type": "Cash",
+    "transactionId": "5",
+    "date": "9/2/2025"
+  }
+]

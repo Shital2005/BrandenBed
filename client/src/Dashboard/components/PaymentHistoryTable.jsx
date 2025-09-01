@@ -48,7 +48,7 @@ const PaymentHistoryTable = () => {
                 <td className="py-2 px-4">{p.tenant}</td>
                 <td className="py-2 px-4">{p.amount}</td>
                 <td className="py-2 px-4">{p.date}</td>
-                <td className="py-2 px-4">{p.method}</td>
+                <td className="py-2 px-4">{p.type}</td>
               </tr>
             ))}
           </tbody>

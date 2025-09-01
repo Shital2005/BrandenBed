@@ -1,19 +1,53 @@
-import React from "react";  
-import PaymentForm from "../components/PaymentForm";
+import React, { useState, useEffect } from "react";
+import SubmitPaymentForm from "../components/SubmitPaymentForm";
 import PaymentHistoryTable from "../components/PaymentHistoryTable";
+import ReviewPaymentsTable from "../components/ReviewPaymentsTable";
 
-const RentCollectionPage = () => (
-  <div className="w-full max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl p-10 border border-[#F7B500] mt-8">
-    <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-[#0D1B2A] tracking-tight text-center">Rent Collection</h2>
-    <div className="flex flex-col md:flex-row gap-10 items-start justify-between">
-      <div className="flex-1">
-        <PaymentForm />
+function RentCollectionPage() {
+  const [payments, setPayments] = React.useState([]);
+  const [refresh, setRefresh] = React.useState(false);
+
+  React.useEffect(() => {
+    const fetchPayments = async () => {
+      try {
+        const res = await fetch("/api/payments");
+        if (res.ok) {
+          const data = await res.json();
+          setPayments(data);
+        }
+      } catch {}
+    };
+    fetchPayments();
+  }, [refresh]);
+
+  const handlePaymentSubmit = () => {
+    setRefresh(r => !r);
+  };
+
+  return (
+    <div className="p-4 space-y-6">
+      {/* Submit Payment */}
+      <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
+        <h2 className="text-2xl font-semibold mb-4 text-blue-900">Submit Payment</h2>
+        <SubmitPaymentForm onSubmit={handlePaymentSubmit} />
       </div>
-      <div className="flex-1">
-        <PaymentHistoryTable />
+
+      {/* Two-column layout for tables */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Payment History */}
+        <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
+          <h2 className="text-2xl font-semibold mb-4 text-blue-900">Payment History</h2>
+          <PaymentHistoryTable payments={payments} />
+        </div>
+
+        {/* Review Payments */}
+        <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
+          <h2 className="text-2xl font-semibold mb-4 text-blue-900">Review Payments</h2>
+          <ReviewPaymentsTable />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
 
 export default RentCollectionPage;
