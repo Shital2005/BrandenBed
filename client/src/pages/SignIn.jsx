@@ -13,7 +13,7 @@ function SignIn({ lang, setLang }) {
     e.preventDefault();
     if (email === 'admin@demo.com' && password === 'password123') {
       setError('');
-      navigate('/dashboard');
+  navigate('/dashboard');
     } else {
       setError('Invalid credentials.');
     }
