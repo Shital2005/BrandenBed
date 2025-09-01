@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaShieldAlt, FaHome, FaWallet } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const coreValues = [
   {
@@ -49,11 +50,16 @@ const CoreValues = () => (
           }}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
         {coreValues.map((value, idx) => (
-          <div
+          <motion.div
             key={idx}
-            className="bg-white rounded-[20px] shadow-lg border border-[rgba(13,27,42,0.1)] p-8 flex flex-col items-center transition-all duration-200 hover:border-[#F7B500] hover:shadow-[0_8px_32px_0_rgba(247,181,0,0.12)] cursor-pointer"
+            className="bg-white rounded-[20px] shadow-lg border border-[rgba(13,27,42,0.1)] p-8 flex flex-col items-center transition-all duration-150 cursor-pointer"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.4, delay: idx * 0.15 }}
+            whileHover={{ scale: 1.12, y: -6, boxShadow: '0 8px 32px 0 rgba(247,181,0,0.12)', borderColor: '#F7B500', transition: { duration: 0.06 } }}
           >
             <div className="mb-5">
               <span className="flex items-center justify-center w-14 h-14 rounded-full" style={{ background: '#0D1B2A' }}>
@@ -72,7 +78,7 @@ const CoreValues = () => (
             >
               {value.subtitle}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -30,13 +30,12 @@ function QuickStats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.4 }}
               transition={{ duration: 0.8, delay: idx * 0.3 }} // faster entry
-              whileHover={{
-                scale: 1.1,
-                y: -8,
-                rotate: 1,
-                boxShadow: '0 8px 32px rgba(247,181,0,0.35)',
-                transition: { duration: 0.4, ease: 'easeOut' } // fast, smooth hover in/out
-              }}
+                whileHover={{
+                  scale: 1.10,
+                  y: -8,
+                  boxShadow: '0 8px 32px 0 rgba(247,181,0,0.25)',
+                  transition: { duration: 0.12 } // fast, smooth hover in/out
+                }}
             >
               <span className="text-4xl mb-4 text-[#F7B500]">{stat.icon}</span>
               <div className="text-3xl font-bold" style={{ color: '#0A1D37' }}>{stat.number}</div>
