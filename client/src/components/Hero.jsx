@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import HeroImage from '../images/HeroImage.jpeg';
 
 function Hero() {
@@ -55,22 +56,23 @@ function Hero() {
           {tagline}
         </motion.p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-4">
-          <motion.button
+          <motion.div
             whileHover={{ scale: 1.05, backgroundColor: '#F7B500', color: '#0D1B2A' }}
             whileTap={{ scale: 0.97 }}
-            className="px-8 py-4 border-2 border-[#F7B500] text-[#F7B500] font-bold rounded-xl bg-transparent transition-colors duration-150 hover:bg-[#F7B500] hover:text-[#0D1B2A] shadow-lg"
+            className="px-8 py-4 border-2 border-[#F7B500] text-[#F7B500] font-bold rounded-xl bg-transparent transition-colors duration-150 hover:bg-[#F7B500] hover:text-[#0D1B2A] shadow-lg cursor-pointer"
           >
-            Explore Properties
-          </motion.button>
-          <motion.button
+            <Link to="/properties" className="block w-full h-full">Explore Properties</Link>
+          </motion.div>
+          <motion.div
             whileHover={{ scale: 1.08, boxShadow: '0 0 0 4px #F7B500' }}
             whileTap={{ scale: 0.97 }}
-            className="px-8 py-4 border-2 border-[#F7B500] text-[#F7B500] font-bold rounded-xl bg-transparent transition-all duration-150 hover:bg-[#F7B500] hover:text-[#0D1B2A] shadow-lg flex items-center gap-2 relative overflow-hidden"
+            className="px-8 py-4 border-2 border-[#F7B500] text-[#F7B500] font-bold rounded-xl bg-transparent transition-all duration-150 hover:bg-[#F7B500] hover:text-[#0D1B2A] shadow-lg flex items-center gap-2 relative overflow-hidden cursor-pointer"
           >
-           
-            <span className="relative z-10">Learn More</span>
-            <span className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-[#F7B500] animate-gradient-x" />
-          </motion.button>
+            <Link to="/about" className="block w-full h-full flex items-center justify-center gap-2">
+              <span className="relative z-10">Learn More</span>
+              <span className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-[#F7B500] animate-gradient-x" />
+            </Link>
+          </motion.div>
         </div>
          
       </div>

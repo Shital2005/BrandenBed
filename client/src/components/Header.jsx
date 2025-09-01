@@ -10,7 +10,7 @@ function Header() {
   const activeNavLink = 'text-yellow bg-navy-dark px-4 py-2 rounded-md font-medium'
 
   return (
-  <header className="w-full" style={{ backgroundColor: 'rgb(4, 22, 41)' }}>
+  <header className="w-full fixed top-0 left-0 z-50" style={{ backgroundColor: 'rgb(4, 22, 41)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -26,7 +26,7 @@ function Header() {
           <nav className="hidden md:flex items-center space-x-1">
             <Link to="/" className={navLink}>Home</Link>
             <Link to="/properties" className={navLink}>Properties</Link>
-            <a href="#about" className={navLink}>About Us</a>
+            <Link to="/about" className={navLink}>About Us</Link>
             <a href="#services" className={navLink}>Services</a>
             <a href="#contact" className={navLink}>Contact</a>
             
