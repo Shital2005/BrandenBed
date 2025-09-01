@@ -52,18 +52,18 @@ function Hero() {
         </motion.p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-4">
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, backgroundColor: '#F7B500', color: '#0D1B2A' }}
             whileTap={{ scale: 0.97 }}
-            className="px-8 py-4 bg-[#F7B500] text-[#0D1B2A] font-bold rounded-xl shadow-lg transition-colors duration-300 hover:bg-yellow-400"
+            className="px-8 py-4 border-2 border-[#F7B500] text-[#F7B500] font-bold rounded-xl bg-transparent transition-colors duration-150 hover:bg-[#F7B500] hover:text-[#0D1B2A] shadow-lg"
           >
             Explore Properties
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: '#F7B500', color: '#0D1B2A' }}
             whileTap={{ scale: 0.97 }}
-            className="px-8 py-4 border-2 border-[#F7B500] text-[#F7B500] font-bold rounded-xl bg-transparent transition-colors duration-300 hover:bg-[#F7B500] hover:text-[#0D1B2A]"
+            className="px-8 py-4 border-2 border-[#F7B500] text-[#F7B500] font-bold rounded-xl bg-transparent transition-colors duration-150 hover:bg-[#F7B500] hover:text-[#0D1B2A]"
           >
-            Watch Demo
+            Learn More
           </motion.button>
         </div>
          
