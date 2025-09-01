@@ -1,85 +1,82 @@
-import React from 'react'
+import React from 'react';
+import { FaShieldAlt, FaHome, FaWallet } from 'react-icons/fa';
 
-function CoreValues() {
-  const values = [
-    {
-      icon: "🏠",
-      title: "Premium Properties",
-      description: "Handpicked locations in Berlin's most desirable neighborhoods",
-      color: "from-[#5C4E4E] to-gray-700"
-    },
-    {
-      icon: "🤝",
-      title: "Trusted Service",
-      description: "18+ years of experience in real estate and property management",
-      color: "from-gray-700 to-[#5C4E4E]"
-    },
-    {
-      icon: "💎",
-      title: "Quality Assurance",
-      description: "Every property meets our strict quality and safety standards",
-      color: "from-gray-600 to-[#5C4E4E]"
-    }
-  ]
+const coreValues = [
+  {
+    title: 'Safety First',
+    subtitle: 'Your security and peace of mind are our top priorities.',
+    icon: <FaShieldAlt className="text-[#F7B500]" size={28} />,
+  },
+  {
+    title: 'Stylish Comfort',
+    subtitle: 'Modern, cozy spaces designed for your lifestyle.',
+    icon: <FaHome className="text-[#F7B500]" size={28} />,
+  },
+  {
+    title: 'Affordable Living',
+    subtitle: 'Premium living at prices you can afford.',
+    icon: <FaWallet className="text-[#F7B500]" size={28} />,
+  },
+];
 
-  return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#5C4E4E] mb-6">
-            Why Choose BrandenBed?
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            We're not just another real estate company. We're your partners in finding the perfect space that feels like home.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {values.map((value, index) => (
-            <div 
-              key={index}
-              className="group relative p-8 bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-200 hover:border-transparent transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden"
-            >
-              {/* Background gradient on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${value.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-              
-              <div className="relative z-10">
-                <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <span className="text-3xl">{value.icon}</span>
-                </div>
-                
-                <h3 className="text-2xl font-bold text-[#5C4E4E] mb-4 group-hover:text-gray-700 transition-colors">
-                  {value.title}
-                </h3>
-                
-                <p className="text-gray-700 leading-relaxed group-hover:text-gray-600 transition-colors">
-                  {value.description}
-                </p>
-                
-                {/* Hover effect line */}
-                <div className={`w-0 h-1 bg-gradient-to-r ${value.color} mt-6 group-hover:w-full transition-all duration-500`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Additional features grid */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: "🔒", text: "Secure Payments" },
-            { icon: "📱", text: "24/7 Support" },
-            { icon: "🚇", text: "Prime Locations" },
-            { icon: "✨", text: "Modern Amenities" }
-          ].map((feature, index) => (
-            <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300 border border-gray-200">
-              <div className="text-2xl mb-2">{feature.icon}</div>
-              <div className="text-sm font-medium text-gray-700">{feature.text}</div>
-            </div>
-          ))}
-        </div>
+const CoreValues = () => (
+  <section
+    className="py-20"
+    style={{
+      background: 'linear-gradient(to bottom, #F8F6F2 0%, #FFFFFF 100%)',
+    }}
+  >
+    <div className="max-w-5xl mx-auto px-4">
+      <div className="flex flex-col items-center mb-12">
+        <h2
+          className="text-center font-bold"
+          style={{
+            color: '#0D1B2A',
+            fontSize: '40px',
+            fontWeight: 700,
+            letterSpacing: '-1px',
+          }}
+        >
+          Our Core Values
+        </h2>
+        <div
+          style={{
+            width: '40px',
+            height: '4px',
+            background: '#F7B500',
+            borderRadius: '2px',
+            marginTop: '8px',
+          }}
+        />
       </div>
-    </section>
-  )
-}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {coreValues.map((value, idx) => (
+          <div
+            key={idx}
+            className="bg-white rounded-[20px] shadow-lg border border-[rgba(13,27,42,0.1)] p-8 flex flex-col items-center transition-all duration-200 hover:border-[#F7B500] hover:shadow-[0_8px_32px_0_rgba(247,181,0,0.12)] cursor-pointer"
+          >
+            <div className="mb-5">
+              <span className="flex items-center justify-center w-14 h-14 rounded-full" style={{ background: '#0D1B2A' }}>
+                {value.icon}
+              </span>
+            </div>
+            <h3
+              className="mb-2 font-bold text-center"
+              style={{ color: '#0D1B2A', fontSize: '18px' }}
+            >
+              {value.title}
+            </h3>
+            <p
+              className="text-center"
+              style={{ color: '#2B2F36', fontSize: '14px', fontWeight: 500 }}
+            >
+              {value.subtitle}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
-export default CoreValues
+export default CoreValues;
