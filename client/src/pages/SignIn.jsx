@@ -45,7 +45,7 @@ function SignIn({ lang, setLang }) {
             {error && <div className="text-red-600 text-sm text-center">{error}</div>}
             <button
               type="submit"
-              className="w-full py-2 rounded-lg bg-gold text-navy font-bold hover:bg-navy hover:text-gold transition-colors duration-150"
+              className="w-full py-2 rounded-lg bg-blue-600 text-white font-bold hover:bg-white hover:text-blue-600 border-2 border-blue-600 transition-colors duration-150"
             >
               Sign In
             </button>
