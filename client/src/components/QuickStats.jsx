@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaBuilding, FaSmile, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 
 const stats = [
@@ -22,14 +23,17 @@ function QuickStats() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, idx) => (
-            <div
+            <motion.div
               key={stat.label}
               className="bg-white rounded-2xl border-2 border-[#F7B500] shadow-lg p-8 flex flex-col items-center justify-center transition-all duration-200 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_8px_32px_0_rgba(247,181,0,0.25)] cursor-pointer"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.2 }}
             >
               <span className="text-4xl mb-4 text-[#F7B500]">{stat.icon}</span>
               <div className="text-3xl font-bold" style={{ color: '#0A1D37' }}>{stat.number}</div>
               <p className="text-lg text-gray-700 font-medium">{stat.label}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
