@@ -4,10 +4,9 @@ import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { FaPinterest, FaFacebook, FaTwitter } from "react-icons/fa";
 
 const links = [
-  { label: 'Properties', href: '#' },
-  { label: 'About Us', href: '#' },
-  { label: 'Services', href: '#' },
-  { label: 'Contact', href: '#' },
+  { label: 'Properties', href: '/properties' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Services', href: '/#services' },
 ];
 
 const Footer = () => (
@@ -30,13 +29,23 @@ const Footer = () => (
           <ul className="mb-4">
             {links.map(link => (
               <li key={link.label} className="mb-2">
-                <a
-                  href={link.href}
-                  className="text-white hover:text-[#F7B500] transition-colors duration-150"
-                  style={{ fontWeight: 500 }}
-                >
-                  {link.label}
-                </a>
+                {link.href.startsWith('/') ? (
+                  <a
+                    href={link.href}
+                    className="text-white hover:text-[#F7B500] transition-colors duration-150"
+                    style={{ fontWeight: 500 }}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="text-white hover:text-[#F7B500] transition-colors duration-150"
+                    style={{ fontWeight: 500 }}
+                  >
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -49,10 +58,10 @@ const Footer = () => (
           <p className="mb-1">+49 176 88317580</p>
           <p className="mb-3">Friedrichstraße 155, 10117 Berlin</p>
            <div className="flex gap-3 mt-2">
-             <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">
+             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">
                <FaLinkedin className="text-[#0D1B2A]" />
              </a>
-             <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">
+             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">
                <FaInstagram className="text-[#0D1B2A]" />
              </a>
             <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">

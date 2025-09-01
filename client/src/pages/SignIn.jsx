@@ -45,7 +45,16 @@ function SignIn({ lang, setLang }) {
             {error && <div className="text-red-600 text-sm text-center">{error}</div>}
             <button
               type="submit"
-              className="w-full py-2 rounded-lg bg-blue-600 text-white font-bold hover:bg-white hover:text-blue-600 border-2 border-blue-600 transition-colors duration-150"
+              className="w-full py-2 rounded-lg font-bold border-2 transition-colors duration-150"
+              style={{ backgroundColor: '#0D1B2A', color: '#fff', borderColor: '#0D1B2A' }}
+              onMouseEnter={e => {
+                e.target.style.backgroundColor = '#fff';
+                e.target.style.color = '#0D1B2A';
+              }}
+              onMouseLeave={e => {
+                e.target.style.backgroundColor = '#0D1B2A';
+                e.target.style.color = '#fff';
+              }}
             >
               Sign In
             </button>
