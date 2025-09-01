@@ -1,5 +1,7 @@
 import React from 'react';
 import StatsCard from '../components/StatsCard';
+import RentChart from '../components/RentChart';
+import TenantIssuesPieChart from '../components/TenantIssuesPieChart';
 
 const DashboardHome = () => {
   return (
@@ -10,6 +12,10 @@ const DashboardHome = () => {
         <StatsCard title="Rent Payments Collected (This Month)" value="€18,450" description="Shows incoming revenue" />
         <StatsCard title="New Properties Added (This Week)" value={3} description="Highlights portfolio growth" />
         <StatsCard title="Active Employees Logged In" value={5} description="Team activity at a glance" />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <RentChart />
+        <TenantIssuesPieChart />
       </div>
     </div>
   );

@@ -12,12 +12,14 @@ const propertiesRouter = require('./routes/properties');
 const tenantsRouter = require('./routes/tenants');
 const employeesRouter = require('./routes/employees');
 const landingRouter = require('./routes/landing');
+	const paymentsRouter = require('./routes/payments');
 
 // Use routers for API endpoints
 app.use('/api/properties', propertiesRouter);
 app.use('/api/tenants', tenantsRouter);
 app.use('/api/employees', employeesRouter);
 app.use('/api/landing', landingRouter);
+	app.use('/api/payments', paymentsRouter);
 
 app.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}`);

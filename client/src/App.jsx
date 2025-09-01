@@ -6,6 +6,7 @@ import AboutUs from './pages/AboutUs';
 import SignIn from './pages/SignIn.jsx';
 import DashboardLayout from './Dashboard/pages/DashboardLayout';
 import DashboardHome from './Dashboard/pages/DashboardHome';
+import RentCollectionPage from './Dashboard/pages/RentCollectionPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
   <Route path="/signin" element={<SignIn lang={lang} setLang={setLang} />} />
         <Route path="/dashboard/*" element={<DashboardLayout />}>
           <Route index element={<DashboardHome />} />
-          <Route path="rent" element={<div>Rent Collection (to implement)</div>} />
+          <Route path="rent-collection" element={<RentCollectionPage />} />
           <Route path="queries" element={<div>Tenant Queries (to implement)</div>} />
           <Route path="properties" element={<div>Properties List & Filters (to implement)</div>} />
           <Route path="employees" element={<div>Employees (to implement)</div>} />
