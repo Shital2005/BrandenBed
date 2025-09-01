@@ -1,0 +1,18 @@
+{
+  "stats": [
+    { "label": "Properties Listed", "value": 120 },
+    { "label": "Happy Tenants", "value": 350 },
+    { "label": "Cities Covered", "value": 5 }
+  ],
+  "coreValues": [
+    { "title": "Safety", "description": "Secure living spaces for peace of mind." },
+    { "title": "Style", "description": "Modern, comfortable, and inspiring environments." },
+    { "title": "Affordability", "description": "Competitive pricing for students and professionals." }
+  ],
+  "services": [
+    { "title": "Property Management", "description": "End-to-end management for landlords and tenants." },
+    { "title": "Roommate Matching", "description": "Find the perfect roommate for your lifestyle." },
+    { "title": "Maintenance Support", "description": "Quick and reliable maintenance services." },
+    { "title": "Flexible Leasing", "description": "Short and long-term lease options available." }
+  ]
+}

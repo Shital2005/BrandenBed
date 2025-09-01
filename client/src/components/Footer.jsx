@@ -40,10 +40,7 @@ const Footer = () => (
               </li>
             ))}
           </ul>
-          <div className="flex gap-2 mt-2">
-            <button className="px-4 py-1 rounded-full border-2 border-[#F7B500] text-white font-semibold hover:bg-[#F7B500] hover:text-[#0D1B2A] transition-colors duration-150">EN</button>
-            <button className="px-4 py-1 rounded-full border-2 border-[#F7B500] text-white font-semibold hover:bg-[#F7B500] hover:text-[#0D1B2A] transition-colors duration-150">DE</button>
-          </div>
+         
         </div>
         {/* Contact */}
         <div className="flex flex-col items-start">
