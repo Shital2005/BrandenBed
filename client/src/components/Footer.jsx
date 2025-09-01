@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaPinterest, FaFacebook, FaTwitter } from "react-icons/fa";
 
 const links = [
   { label: 'Properties', href: '#' },
@@ -50,14 +51,23 @@ const Footer = () => (
           <p className="mb-1">contact@brandenbedlivingspaces.com</p>
           <p className="mb-1">+49 176 88317580</p>
           <p className="mb-3">Friedrichstraße 155, 10117 Berlin</p>
-          <div className="flex gap-3 mt-2">
-            <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white hover:bg-[#F7B500] transition-colors duration-150">
-              <FaLinkedin className="text-[#F7B500]" />
+           <div className="flex gap-3 mt-2">
+             <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">
+               <FaLinkedin className="text-[#0D1B2A]" />
+             </a>
+             <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">
+               <FaInstagram className="text-[#0D1B2A]" />
+             </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">
+              <FaPinterest className="text-[#0D1B2A]" />
             </a>
-            <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white hover:bg-[#F7B500] transition-colors duration-150">
-              <FaInstagram className="text-[#F7B500]" />
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">
+              <FaFacebook className="text-[#0D1B2A]" />
             </a>
-          </div>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white border-2 border-[#F7B500] hover:bg-[#F7B500] transition-colors duration-150">
+              <FaTwitter className="text-[#0D1B2A]" />
+            </a>
+           </div>
         </div>
       </div>
       {/* Bottom strip */}
