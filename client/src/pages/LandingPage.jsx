@@ -6,7 +6,7 @@ import CoreValues from '../components/CoreValues';
 import Services from '../components/Services';
 import Footer from '../components/Footer';
 
-function LandingPage() {
+function LandingPage({ lang, setLang }) {
   const [landingData, setLandingData] = useState({ stats: [], coreValues: [], services: [] });
   const [loading, setLoading] = useState(true);
 
@@ -26,8 +26,8 @@ function LandingPage() {
 
   return (
     <div className="min-h-screen">
-      <Header />
-      <Hero />
+      <Header lang={lang} setLang={setLang} />
+      <Hero lang={lang} />
       <QuickStats stats={landingData.stats} />
       <CoreValues coreValues={landingData.coreValues} />
       <Services services={landingData.services} />

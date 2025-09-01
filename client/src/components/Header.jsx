@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import logo from '../images/logo.png'
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header({ lang = 'en', setLang }) {
   const [open, setOpen] = useState(false)
-  const [language, setLanguage] = useState('EN')
 
   const navLink = 'text-white hover:text-yellow px-4 py-2 rounded-md transition-colors duration-200 font-medium'
   const activeNavLink = 'text-yellow bg-navy-dark px-4 py-2 rounded-md font-medium'
@@ -24,7 +23,20 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <Link to="/" className={navLink}>Home</Link>
+            <Link
+              to="/"
+              className={navLink}
+              onClick={e => {
+                e.preventDefault();
+                if (window.location.pathname !== '/') {
+                  window.location.assign('/');
+                } else {
+                  document.querySelector('section')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Home
+            </Link>
             <Link to="/properties" className={navLink}>Properties</Link>
             <Link to="/about" className={navLink}>About Us</Link>
             <Link
@@ -39,15 +51,27 @@ function Header() {
             >
               Services
             </Link>
-            <a href="#contact" className={navLink}>Contact</a>
+            <a
+              href="#contact"
+              className={navLink}
+              onClick={e => {
+                e.preventDefault();
+                const footer = document.querySelector('footer');
+                if (footer) {
+                  footer.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Contact
+            </a>
             
             {/* Language Toggle */}
             <div className="ml-4 flex items-center border-l border-yellow pl-4">
               <button
-                onClick={() => setLanguage(language === 'EN' ? 'DE' : 'EN')}
+                onClick={() => setLang(lang === 'en' ? 'de' : 'en')}
                 className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white hover:text-yellow hover:bg-navy-dark rounded-md transition-colors duration-200"
               >
-                <span className="text-xs font-bold">{language}</span>
+                <span className="text-xs font-bold">{lang === 'en' ? 'DE' : 'EN'}</span>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                 </svg>
@@ -67,10 +91,10 @@ function Header() {
           <div className="md:hidden flex items-center gap-3">
             {/* Language toggle for mobile */}
             <button
-              onClick={() => setLanguage(language === 'EN' ? 'DE' : 'EN')}
+              onClick={() => setLang(lang === 'en' ? 'de' : 'en')}
               className="flex items-center gap-1 px-2 py-1 text-sm font-medium text-white hover:text-yellow rounded-md"
             >
-              <span className="text-xs font-bold">{language}</span>
+              <span className="text-xs font-bold">{lang === 'en' ? 'DE' : 'EN'}</span>
               <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
               </svg>

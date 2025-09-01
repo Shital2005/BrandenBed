@@ -1,13 +1,20 @@
 
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import HeroImage from '../images/HeroImage.jpeg';
 
-function Hero() {
-  const headline = 'Find Your Dream Space in Berlin';
-  const tagline = 'Discover spacious, stylish, and secure homes for students and professionals';
+function Hero({ lang = 'en' }) {
+  const content = {
+    en: {
+      headline: 'Find Your Dream Space in Berlin',
+      tagline: 'Discover spacious, stylish, and secure homes for students and professionals',
+    },
+    de: {
+      headline: 'Finden Sie Ihren Traumraum in Berlin',
+      tagline: 'Entdecken Sie geräumige, stilvolle und sichere Wohnungen für Studenten und Berufstätige',
+    },
+  };
   return (
     <section className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center">
       {/* Berlin cityscape at dusk background with golden overlay */}
@@ -44,7 +51,7 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg"
         >
-          {headline}
+          {content[lang].headline}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +60,7 @@ function Hero() {
           className="text-xl md:text-2xl mb-10 font-semibold"
           style={{ color: '#F7B500' }}
         >
-          {tagline}
+          {content[lang].tagline}
         </motion.p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-4">
           <motion.div
@@ -74,7 +81,6 @@ function Hero() {
             </Link>
           </motion.div>
         </div>
-         
       </div>
     </section>
   )
