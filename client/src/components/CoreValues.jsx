@@ -6,19 +6,19 @@ function CoreValues() {
       icon: "🏠",
       title: "Premium Properties",
       description: "Handpicked locations in Berlin's most desirable neighborhoods",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-[#5C4E4E] to-gray-700"
     },
     {
       icon: "🤝",
       title: "Trusted Service",
       description: "18+ years of experience in real estate and property management",
-      color: "from-green-500 to-emerald-500"
+      color: "from-gray-700 to-[#5C4E4E]"
     },
     {
       icon: "💎",
       title: "Quality Assurance",
       description: "Every property meets our strict quality and safety standards",
-      color: "from-purple-500 to-pink-500"
+      color: "from-gray-600 to-[#5C4E4E]"
     }
   ]
 
@@ -26,10 +26,10 @@ function CoreValues() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#5C4E4E] mb-6">
             Why Choose BrandenBed?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             We're not just another real estate company. We're your partners in finding the perfect space that feels like home.
           </p>
         </div>
@@ -48,11 +48,11 @@ function CoreValues() {
                   <span className="text-3xl">{value.icon}</span>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors">
+                <h3 className="text-2xl font-bold text-[#5C4E4E] mb-4 group-hover:text-gray-700 transition-colors">
                   {value.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">
+                <p className="text-gray-700 leading-relaxed group-hover:text-gray-600 transition-colors">
                   {value.description}
                 </p>
                 
@@ -71,7 +71,7 @@ function CoreValues() {
             { icon: "🚇", text: "Prime Locations" },
             { icon: "✨", text: "Modern Amenities" }
           ].map((feature, index) => (
-            <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors duration-300">
+            <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300 border border-gray-200">
               <div className="text-2xl mb-2">{feature.icon}</div>
               <div className="text-sm font-medium text-gray-700">{feature.text}</div>
             </div>
