@@ -79,12 +79,12 @@ function Header({ lang = 'en', setLang }) {
             </div>
 
             {/* Sign In Button */}
-            <a 
-              href="#signin" 
+            <Link
+              to="/signin"
               className="ml-4 inline-flex items-center px-4 py-2 border border-yellow text-sm font-medium rounded-md text-navy bg-yellow hover:bg-yellow-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow transition-colors duration-200 shadow-sm"
             >
               Sign In
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile menu button */}

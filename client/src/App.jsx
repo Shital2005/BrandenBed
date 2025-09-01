@@ -3,6 +3,8 @@ import LandingPage from './pages/LandingPage.jsx';
 import Properties from './pages/Properties.jsx';
 import PropertyDetails from './pages/PropertyDetails.jsx';
 import AboutUs from './pages/AboutUs';
+import SignIn from './pages/SignIn.jsx';
+import Dashboard from './pages/Dashboard.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -10,10 +12,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage lang={lang} setLang={setLang} />} />
-        <Route path="/properties" element={<Properties />} />
-        <Route path="/property/:id" element={<PropertyDetails />} />
-        <Route path="/about" element={<AboutUs />} />
+  <Route path="/" element={<LandingPage lang={lang} setLang={setLang} />} />
+  <Route path="/properties" element={<Properties />} />
+  <Route path="/property/:id" element={<PropertyDetails />} />
+  <Route path="/about" element={<AboutUs />} />
+  <Route path="/signin" element={<SignIn lang={lang} setLang={setLang} />} />
+  <Route path="/dashboard" element={<Dashboard lang={lang} setLang={setLang} />} />
       </Routes>
     </Router>
   );
