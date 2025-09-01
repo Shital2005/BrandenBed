@@ -25,15 +25,25 @@ function QuickStats() {
           {stats.map((stat, idx) => (
             <motion.div
               key={stat.label}
-              className="bg-white rounded-2xl border-2 border-[#F7B500] shadow-lg p-8 flex flex-col items-center justify-center transition-all duration-200 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_8px_32px_0_rgba(247,181,0,0.25)] cursor-pointer"
+              className="bg-white rounded-2xl border-2 border-[#F7B500] shadow-lg p-8 flex flex-col items-center justify-center cursor-pointer"
               initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.4 }}
+              transition={{ duration: 0.8, delay: idx * 0.3 }} // faster entry
+              whileHover={{
+                scale: 1.1,
+                y: -8,
+                rotate: 1,
+                boxShadow: '0 8px 32px rgba(247,181,0,0.35)',
+                transition: { duration: 0.4, ease: 'easeOut' } // fast, smooth hover in/out
+              }}
             >
               <span className="text-4xl mb-4 text-[#F7B500]">{stat.icon}</span>
               <div className="text-3xl font-bold" style={{ color: '#0A1D37' }}>{stat.number}</div>
               <p className="text-lg text-gray-700 font-medium">{stat.label}</p>
             </motion.div>
+
+
           ))}
         </div>
       </div>
