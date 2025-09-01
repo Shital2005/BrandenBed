@@ -1,8 +1,12 @@
 
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import HeroImage from '../images/HeroImage.jpeg';
 
 function Hero() {
+  const headline = 'Find Your Dream Space in Berlin';
+  const tagline = 'Discover spacious, stylish, and secure homes for students and professionals';
   return (
     <section className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center">
       {/* Berlin cityscape at dusk background with golden overlay */}
@@ -39,7 +43,7 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg"
         >
-          Find Your Dream Space in Berlin
+          {headline}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -48,7 +52,7 @@ function Hero() {
           className="text-xl md:text-2xl mb-10 font-semibold"
           style={{ color: '#F7B500' }}
         >
-          Discover spacious, stylish, and secure homes for students and professionals
+          {tagline}
         </motion.p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-4">
           <motion.button
@@ -59,11 +63,13 @@ function Hero() {
             Explore Properties
           </motion.button>
           <motion.button
-            whileHover={{ scale: 1.05, backgroundColor: '#F7B500', color: '#0D1B2A' }}
+            whileHover={{ scale: 1.08, boxShadow: '0 0 0 4px #F7B500' }}
             whileTap={{ scale: 0.97 }}
-            className="px-8 py-4 border-2 border-[#F7B500] text-[#F7B500] font-bold rounded-xl bg-transparent transition-colors duration-150 hover:bg-[#F7B500] hover:text-[#0D1B2A]"
+            className="px-8 py-4 border-2 border-[#F7B500] text-[#F7B500] font-bold rounded-xl bg-transparent transition-all duration-150 hover:bg-[#F7B500] hover:text-[#0D1B2A] shadow-lg flex items-center gap-2 relative overflow-hidden"
           >
-            Learn More
+           
+            <span className="relative z-10">Learn More</span>
+            <span className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-[#F7B500] animate-gradient-x" />
           </motion.button>
         </div>
          
