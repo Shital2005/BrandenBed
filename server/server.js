@@ -10,32 +10,42 @@ app.use(cors());
 app.use(express.json());
 
 // Simulated data access layer for each component
-function getProperties() {
-	const filePath = path.join(__dirname, 'routes', 'properties.json');
-	const raw = fs.readFileSync(filePath, 'utf-8');
-	return JSON.parse(raw);
+function getPropertiesAsync(callback) {
+	const filePath = path.join(__dirname, 'data', 'properties.json');
+	fs.readFile(filePath, 'utf-8', (err, raw) => {
+		if (err) {
+			console.error('Error reading properties.json:', err);
+			return callback(err);
+		}
+		try {
+			const data = JSON.parse(raw);
+			callback(null, data);
+		} catch (parseErr) {
+			console.error('Error parsing properties.json:', parseErr);
+			callback(parseErr);
+		}
+	});
 }
 
-function getTenants() {
-	const filePath = path.join(__dirname, 'routes', 'tenants.json');
-	const raw = fs.readFileSync(filePath, 'utf-8');
-	return JSON.parse(raw);
+	const tenantsPath = path.join(__dirname, 'data', 'tenants.json');
+	const tenantsRaw = fs.readFileSync(tenantsPath, 'utf-8');
+	return JSON.parse(tenantsRaw);
 }
 
-function getEmployees() {
-	const filePath = path.join(__dirname, 'routes', 'employees.json');
-	const raw = fs.readFileSync(filePath, 'utf-8');
-	return JSON.parse(raw);
+	const employeesPath = path.join(__dirname, 'data', 'employees.json');
+	const employeesRaw = fs.readFileSync(employeesPath, 'utf-8');
+	return JSON.parse(employeesRaw);
 }
 
 // Properties API
 app.get('/api/properties', (req, res) => {
-	try {
-		const data = getProperties();
-		res.json(data);
-	} catch (err) {
-		res.status(500).json({ error: 'Failed to load properties.' });
-	}
+	getPropertiesAsync((err, data) => {
+		if (err) {
+			res.status(500).json({ error: 'Failed to load properties.' });
+		} else {
+			res.json(data);
+		}
+	});
 });
 
 // Tenants API
@@ -57,10 +67,9 @@ app.get('/api/employees', (req, res) => {
 		res.status(500).json({ error: 'Failed to load employees.' });
 	}
 });
-function getLandingData() {
-	const filePath = path.join(__dirname, 'routes', 'landingData.json');
-	const raw = fs.readFileSync(filePath, 'utf-8');
-	return JSON.parse(raw);
+	const landingPath = path.join(__dirname, 'data', 'landingData.json');
+	const landingRaw = fs.readFileSync(landingPath, 'utf-8');
+	return JSON.parse(landingRaw);
 }
 
 // Landing page API

@@ -1,0 +1,23 @@
+{
+  "stats": [
+    { "icon": "FaBuilding", "number": "500+", "label": "Properties Sold" },
+    { "icon": "FaSmile", "number": "1200+", "label": "Happy Clients" },
+    { "icon": "FaClock", "number": "18+", "label": "Years Experience" },
+    { "icon": "FaMapMarkerAlt", "number": "8+", "label": "Districts in Berlin" }
+  ],
+  "coreValues": [
+    { "title": "Safety First", "description": "Your security and peace of mind are our top priorities." },
+    { "title": "Stylish Comfort", "description": "Modern, cozy spaces designed for your lifestyle." },
+    { "title": "Affordable Living", "description": "Premium living at prices you can afford." }
+  ],
+  "services": [
+    { "title": "Modern, fully furnished rooms", "description": "" },
+    { "title": "High-speed WiFi", "description": "" },
+    { "title": "24/7 security & support", "description": "" },
+    { "title": "Community events & networking", "description": "" },
+    { "title": "24/7 power backup", "description": "" },
+    { "title": "Dedicated work desk", "description": "" },
+    { "title": "Near public transport", "description": "" },
+    { "title": "Nearby all universities", "description": "" }
+  ]
+}

@@ -24,7 +24,7 @@ function Properties() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header />
-      <main className="flex-1 py-16">
+  <main className="flex-1 py-16 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-10 text-center text-navy">Available Properties</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -37,7 +37,7 @@ function Properties() {
                 <p className="text-gray-600 text-sm mb-4">{property.description}</p>
                 <Link
                   to={`/property/${property.id}`}
-                  className="mt-auto px-4 py-2 rounded-full bg-gold text-navy font-semibold hover:bg-navy hover:text-gold transition-colors duration-150 text-center"
+                  className="mt-auto px-4 py-2 rounded-full bg-gold text-navy font-semibold hover:bg-navy hover:text-gold transition-colors duration-150 text-center transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2"
                   style={{ backgroundColor: '#F7B500', color: '#0D1B2A' }}
                 >
                   View Details

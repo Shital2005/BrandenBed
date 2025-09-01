@@ -27,7 +27,18 @@ function Header() {
             <Link to="/" className={navLink}>Home</Link>
             <Link to="/properties" className={navLink}>Properties</Link>
             <Link to="/about" className={navLink}>About Us</Link>
-            <a href="#services" className={navLink}>Services</a>
+            <Link
+              to="/"
+              className={navLink}
+              onClick={e => {
+                e.preventDefault();
+                window.location.pathname !== '/'
+                  ? window.location.assign('/#services')
+                  : document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Services
+            </Link>
             <a href="#contact" className={navLink}>Contact</a>
             
             {/* Language Toggle */}
