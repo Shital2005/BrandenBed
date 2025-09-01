@@ -17,11 +17,8 @@ function Header() {
             <img 
               src={logo} 
               alt="BrandenBed Logo" 
-              className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+              className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
             />
-            <span className="text-2xl font-bold tracking-tight text-yellow group-hover:text-yellow-light transition-colors duration-200">
-              BrandenBed
-            </span>
           </a>
 
           {/* Desktop Navigation */}

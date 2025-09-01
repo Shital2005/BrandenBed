@@ -1,36 +1,67 @@
-import React from 'react'
+import React from 'react';
+import { FaBed, FaWifi, FaShieldAlt, FaUsers, FaBolt, FaLaptop, FaBus, FaUniversity } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
-function Services() {
-  return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 text-[#5C4E4E]">Our Services</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-            <div className="w-12 h-12 bg-[#5C4E4E] rounded-lg flex items-center justify-center mb-4">
-              <span className="text-white text-xl">🏢</span>
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-[#5C4E4E]">Property Rentals</h3>
-            <p className="text-gray-700">Find your perfect rental property in Berlin's most desirable neighborhoods.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-            <div className="w-12 h-12 bg-[#5C4E4E] rounded-lg flex items-center justify-center mb-4">
-              <span className="text-white text-xl">🤝</span>
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-[#5C4E4E]">Tenant Support</h3>
-            <p className="text-gray-700">24/7 support for all your rental needs and maintenance requests.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-            <div className="w-12 h-12 bg-[#5C4E4E] rounded-lg flex items-center justify-center mb-4">
-              <span className="text-white text-xl">⚙️</span>
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-[#5C4E4E]">Property Management</h3>
-            <p className="text-gray-700">Complete property management services for landlords and investors.</p>
-          </div>
-        </div>
+const services = [
+  { title: 'Modern, fully furnished rooms', icon: <FaBed size={24} className="text-[#F7B500]" /> },
+  { title: 'High-speed WiFi', icon: <FaWifi size={24} className="text-[#F7B500]" /> },
+  { title: '24/7 security & support', icon: <FaShieldAlt size={24} className="text-[#F7B500]" /> },
+  { title: 'Community events & networking', icon: <FaUsers size={24} className="text-[#F7B500]" /> },
+  { title: '24/7 power backup', icon: <FaBolt size={24} className="text-[#F7B500]" /> },
+  { title: 'Dedicated work desk', icon: <FaLaptop size={24} className="text-[#F7B500]" /> },
+  { title: 'Near public transport', icon: <FaBus size={24} className="text-[#F7B500]" /> },
+  { title: 'Nearby all universities', icon: <FaUniversity size={24} className="text-[#F7B500]" /> },
+];
+
+const Services = () => (
+  <section className="py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center mb-12">
+        <h2
+          className="text-center font-bold"
+          style={{
+            color: '#0D1B2A',
+            fontSize: '40px',
+            fontWeight: 700,
+            letterSpacing: '-1px',
+          }}
+        >
+          Our Services
+        </h2>
+        <div
+          style={{
+            width: '40px',
+            height: '4px',
+            background: '#F7B500',
+            borderRadius: '2px',
+            marginTop: '8px',
+          }}
+        />
+        <p className="text-lg text-gray-700 mt-4 text-center max-w-2xl">
+          Designed to make your stay stress-free and productive.
+        </p>
       </div>
-    </section>
-  )
-}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        {services.map((service, idx) => (
+          <motion.div
+            key={service.title}
+            className="bg-white rounded-[20px] border border-transparent shadow-[0_6px_16px_rgba(0,0,0,0.06)] p-8 flex flex-col items-center transition-all duration-150 cursor-pointer"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.4, delay: idx * 0.15 }}
+            whileHover={{ scale: 1.08, y: -8, boxShadow: '0 12px 32px 0 rgba(247,181,0,0.12)', borderColor: '#F7B500', transition: { duration: 0.12 } }}
+          >
+            <span className="flex items-center justify-center w-14 h-14 rounded-full mb-5 transition-all duration-150" style={{ background: '#0D1B2A', boxShadow: '0 0 0 0 rgba(247,181,0,0)' }}>
+              {service.icon}
+            </span>
+            <h3 className="font-bold text-center" style={{ color: '#0D1B2A', fontSize: '16px' }}>{service.title}</h3>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
-export default Services
+export default Services;
+
