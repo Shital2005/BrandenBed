@@ -1,18 +1,23 @@
 {
   "stats": [
-    { "label": "Properties Listed", "value": 120 },
-    { "label": "Happy Tenants", "value": 350 },
-    { "label": "Cities Covered", "value": 5 }
+    { "icon": "FaBuilding", "number": "500+", "label": "Properties Sold" },
+    { "icon": "FaSmile", "number": "1200+", "label": "Happy Clients" },
+    { "icon": "FaClock", "number": "18+", "label": "Years Experience" },
+    { "icon": "FaMapMarkerAlt", "number": "8+", "label": "Districts in Berlin" }
   ],
   "coreValues": [
-    { "title": "Safety", "description": "Secure living spaces for peace of mind." },
-    { "title": "Style", "description": "Modern, comfortable, and inspiring environments." },
-    { "title": "Affordability", "description": "Competitive pricing for students and professionals." }
+    { "title": "Safety First", "description": "Your security and peace of mind are our top priorities." },
+    { "title": "Stylish Comfort", "description": "Modern, cozy spaces designed for your lifestyle." },
+    { "title": "Affordable Living", "description": "Premium living at prices you can afford." }
   ],
   "services": [
-    { "title": "Property Management", "description": "End-to-end management for landlords and tenants." },
-    { "title": "Roommate Matching", "description": "Find the perfect roommate for your lifestyle." },
-    { "title": "Maintenance Support", "description": "Quick and reliable maintenance services." },
-    { "title": "Flexible Leasing", "description": "Short and long-term lease options available." }
+    { "title": "Modern, fully furnished rooms", "description": "" },
+    { "title": "High-speed WiFi", "description": "" },
+    { "title": "24/7 security & support", "description": "" },
+    { "title": "Community events & networking", "description": "" },
+    { "title": "24/7 power backup", "description": "" },
+    { "title": "Dedicated work desk", "description": "" },
+    { "title": "Near public transport", "description": "" },
+    { "title": "Nearby all universities", "description": "" }
   ]
 }

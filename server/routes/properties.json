@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"title": "Modern Studio in Mitte",
+		"address": "Friedrichstraße 155, 10117 Berlin",
+		"price": "€950/mo",
+		"image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+		"description": "Bright, fully furnished studio apartment in the heart of Berlin. High-speed WiFi, utilities included."
+	},
+	{
+		"id": 2,
+		"title": "Cozy Room near Alexanderplatz",
+		"address": "Alexanderstraße 7, 10178 Berlin",
+		"price": "€650/mo",
+		"image": "https://images.unsplash.com/photo-1464983953574-0892a716854b",
+		"description": "Comfortable private room in a shared flat. Close to public transport and universities."
+	},
+	{
+		"id": 3,
+		"title": "Spacious Loft in Kreuzberg",
+		"address": "Oranienstraße 25, 10999 Berlin",
+		"price": "€1200/mo",
+		"image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd",
+		"description": "Stylish loft with open living area, perfect for professionals. Community events and networking included."
+	}
+]

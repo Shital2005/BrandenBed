@@ -2,6 +2,21 @@ import React from 'react';
 import { FaBed, FaWifi, FaShieldAlt, FaUsers, FaBolt, FaLaptop, FaBus, FaUniversity } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+const iconMap = {
+  'Property Management': <FaBed size={24} className="text-[#F7B500]" />,
+  'Roommate Matching': <FaUsers size={24} className="text-[#F7B500]" />,
+  'Maintenance Support': <FaShieldAlt size={24} className="text-[#F7B500]" />,
+  'Flexible Leasing': <FaUniversity size={24} className="text-[#F7B500]" />,
+  'Modern, fully furnished rooms': <FaBed size={24} className="text-[#F7B500]" />,
+  'High-speed WiFi': <FaWifi size={24} className="text-[#F7B500]" />,
+  '24/7 security & support': <FaShieldAlt size={24} className="text-[#F7B500]" />,
+  'Community events & networking': <FaUsers size={24} className="text-[#F7B500]" />,
+  '24/7 power backup': <FaBolt size={24} className="text-[#F7B500]" />,
+  'Dedicated work desk': <FaLaptop size={24} className="text-[#F7B500]" />,
+  'Near public transport': <FaBus size={24} className="text-[#F7B500]" />,
+  'Nearby all universities': <FaUniversity size={24} className="text-[#F7B500]" />,
+};
+
 const services = [
   { title: 'Modern, fully furnished rooms', icon: <FaBed size={24} className="text-[#F7B500]" /> },
   { title: 'High-speed WiFi', icon: <FaWifi size={24} className="text-[#F7B500]" /> },
@@ -53,9 +68,12 @@ const Services = () => (
             whileHover={{ scale: 1.08, y: -8, boxShadow: '0 12px 32px 0 rgba(247,181,0,0.12)', borderColor: '#F7B500', transition: { duration: 0.12 } }}
           >
             <span className="flex items-center justify-center w-14 h-14 rounded-full mb-5 transition-all duration-150" style={{ background: '#0D1B2A', boxShadow: '0 0 0 0 rgba(247,181,0,0)' }}>
-              {service.icon}
+              {iconMap[service.title] || <FaBed size={24} className="text-[#F7B500]" />}
             </span>
             <h3 className="font-bold text-center" style={{ color: '#0D1B2A', fontSize: '16px' }}>{service.title}</h3>
+            {service.description && (
+              <p className="text-gray-700 text-center" style={{ fontSize: '14px' }}>{service.description}</p>
+            )}
           </motion.div>
         ))}
       </div>

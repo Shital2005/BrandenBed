@@ -29,20 +29,18 @@ function QuickStats() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.4 }}
-              transition={{ duration: 0.8, delay: idx * 0.3 }} // faster entry
-                whileHover={{
-                  scale: 1.10,
-                  y: -8,
-                  boxShadow: '0 8px 32px 0 rgba(247,181,0,0.25)',
-                  transition: { duration: 0.12 } // fast, smooth hover in/out
-                }}
+              transition={{ duration: 0.8, delay: idx * 0.3 }}
+              whileHover={{
+                scale: 1.10,
+                y: -8,
+                boxShadow: '0 8px 32px 0 rgba(247,181,0,0.25)',
+                transition: { duration: 0.12 }
+              }}
             >
               <span className="text-4xl mb-4 text-[#F7B500]">{stat.icon}</span>
-              <div className="text-3xl font-bold" style={{ color: '#0A1D37' }}>{stat.number}</div>
-              <p className="text-lg text-gray-700 font-medium">{stat.label}</p>
+              <span className="text-3xl font-bold mb-2" style={{ color: '#0A1D37' }}>{stat.number}</span>
+              <span className="text-lg text-gray-700">{stat.label}</span>
             </motion.div>
-
-
           ))}
         </div>
       </div>
@@ -51,4 +49,4 @@ function QuickStats() {
 }
 
 
-export default QuickStats
+export default QuickStats;

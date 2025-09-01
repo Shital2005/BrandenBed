@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../images/logo.png'
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [open, setOpen] = useState(false)
@@ -23,7 +24,7 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <a href="#properties" className={navLink}>Properties</a>
+            <Link to="/properties" className={navLink}>Properties</Link>
             <a href="#about" className={navLink}>About Us</a>
             <a href="#services" className={navLink}>Services</a>
             <a href="#contact" className={navLink}>Contact</a>

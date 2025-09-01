@@ -2,6 +2,15 @@ import React from 'react';
 import { FaShieldAlt, FaHome, FaWallet } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+const iconMap = {
+  'Safety': <FaShieldAlt className="text-[#F7B500]" size={28} />,
+  'Safety First': <FaShieldAlt className="text-[#F7B500]" size={28} />,
+  'Style': <FaHome className="text-[#F7B500]" size={28} />,
+  'Stylish Comfort': <FaHome className="text-[#F7B500]" size={28} />,
+  'Affordability': <FaWallet className="text-[#F7B500]" size={28} />,
+  'Affordable Living': <FaWallet className="text-[#F7B500]" size={28} />,
+};
+
 const coreValues = [
   {
     title: 'Safety First',
@@ -63,7 +72,7 @@ const CoreValues = () => (
           >
             <div className="mb-5">
               <span className="flex items-center justify-center w-14 h-14 rounded-full" style={{ background: '#0D1B2A' }}>
-                {value.icon}
+                {iconMap[value.title] || <FaShieldAlt className="text-[#F7B500]" size={28} />}
               </span>
             </div>
             <h3
@@ -76,7 +85,7 @@ const CoreValues = () => (
               className="text-center"
               style={{ color: '#2B2F36', fontSize: '14px', fontWeight: 500 }}
             >
-              {value.subtitle}
+              {value.description || value.subtitle}
             </p>
           </motion.div>
         ))}
