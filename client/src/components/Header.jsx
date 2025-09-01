@@ -24,6 +24,7 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
+            <Link to="/" className={navLink}>Home</Link>
             <Link to="/properties" className={navLink}>Properties</Link>
             <a href="#about" className={navLink}>About Us</a>
             <a href="#services" className={navLink}>Services</a>
