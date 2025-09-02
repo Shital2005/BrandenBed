@@ -53,7 +53,7 @@ function Properties() {
                   </div>
                   <Link
                     to={`/property/${property.id}`}
-                    className="mt-auto px-4 py-2 rounded-full bg-gold text-navy font-semibold hover:bg-navy hover:text-gold transition-colors duration-150 text-center"
+                    className="mt-auto px-4 py-2 rounded-full bg-yellow-400 text-black font-semibold hover:bg-yellow-500 hover:text-black transition-colors duration-150 text-center"
                   >
                     View Details
                   </Link>

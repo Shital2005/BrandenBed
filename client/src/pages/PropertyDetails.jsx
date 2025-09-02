@@ -10,7 +10,7 @@ function PropertyDetails() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-1 py-16">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-2xl shadow-lg p-8">
+  <div className="max-w-4xl mx-auto px-4 sm:px-8 lg:px-16 bg-white shadow-lg p-12">
           <h2 className="text-3xl font-bold mb-4 text-navy">Property Details</h2>
           <img src="https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Room" className="w-full h-64 object-cover rounded-xl mb-6" />
           <h3 className="text-xl font-bold mb-2 text-navy">Modern Studio in Mitte</h3>
