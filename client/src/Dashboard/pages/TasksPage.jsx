@@ -29,7 +29,7 @@ const TasksPage = () => {
       <div className="w-full max-w-3xl">
         <h2 className="text-3xl font-bold mb-8 text-blue-800 tracking-tight">Tasks</h2>
         <button className="bg-yellow-400 text-black font-bold px-6 py-2 rounded-xl shadow hover:bg-yellow-500 transition mb-6" onClick={() => setModalOpen(true)}>Add Task</button>
-        <table className="w-full text-left border-collapse bg-white rounded-2xl shadow-xl border border-yellow-400">
+  <table className="w-full text-left border-collapse bg-white rounded-2xl shadow-xl border border-yellow-400">
           <thead>
             <tr className="bg-yellow-400">
               <th className="py-3 px-4 text-black font-bold">Title</th>
