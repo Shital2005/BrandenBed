@@ -1,8 +1,8 @@
-
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import HeroImage from '../images/HeroImage.jpeg';
+
+const HeroImage = "/images/HeroImage.jpeg";
 
 function Hero({ lang = 'en' }) {
   const content = {

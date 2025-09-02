@@ -24,30 +24,30 @@ function RentCollectionPage() {
     setRefresh(r => !r);
   };
 
-  return (
-    <div className="p-4 space-y-6">
-      {/* Submit Payment */}
-      <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
-        <h2 className="text-2xl font-semibold mb-4 text-blue-900">Submit Payment</h2>
-        <SubmitPaymentForm onSubmit={handlePaymentSubmit} />
-      </div>
-
-      {/* Two-column layout for tables */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Payment History */}
-        <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-900">Payment History</h2>
-          <PaymentHistoryTable payments={payments} />
+    return (
+      <div className="min-h-screen bg-blue-50 p-6 md:p-10 space-y-8">
+        {/* Submit Payment */}
+        <div className="bg-white p-8 rounded-3xl shadow-2xl border border-blue-200 flex flex-col items-center">
+          <h2 className="text-3xl font-bold mb-6 text-blue-800 tracking-tight">Submit Payment</h2>
+          <SubmitPaymentForm onSubmit={handlePaymentSubmit} />
         </div>
 
-        {/* Review Payments */}
-        <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-900">Review Payments</h2>
-          <ReviewPaymentsTable />
+        {/* Two-column layout for tables */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Payment History */}
+          <div className="bg-white p-8 rounded-3xl shadow-2xl border border-blue-200">
+            <h2 className="text-2xl font-bold mb-6 text-blue-800 tracking-tight">Payment History</h2>
+            <PaymentHistoryTable payments={payments} refresh={refresh} />
+          </div>
+
+          {/* Review Payments */}
+          <div className="bg-white p-8 rounded-3xl shadow-2xl border border-blue-200">
+            <h2 className="text-2xl font-bold mb-6 text-blue-800 tracking-tight">Review Payments</h2>
+            <ReviewPaymentsTable />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
 }
 
 export default RentCollectionPage;

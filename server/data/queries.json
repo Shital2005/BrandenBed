@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "tenant": "John Doe",
+    "issue": "Leaky faucet in kitchen",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "tenant": "Jane Smith",
+    "issue": "Broken window in bedroom",
+    "status": "In Progress"
+  },
+  {
+    "id": 3,
+    "tenant": "Alice Brown",
+    "issue": "Noisy neighbors",
+    "status": "Resolved"
+  }
+]

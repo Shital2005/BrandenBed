@@ -34,26 +34,26 @@ const SubmitPaymentForm = () => {
     }
   };
 
-  return (
-    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-      <select name="property" value={form.property} onChange={handleChange} required className="px-4 py-2 rounded border">
-        <option value="">Select Property</option>
-        {properties.map(p => <option key={p}>{p}</option>)}
-      </select>
-      <select name="tenant" value={form.tenant} onChange={handleChange} required className="px-4 py-2 rounded border">
-        <option value="">Select Tenant</option>
-        {tenants.map(t => <option key={t}>{t}</option>)}
-      </select>
-      <input name="amount" value={form.amount} onChange={handleChange} placeholder="Amount" type="number" required className="px-4 py-2 rounded border" />
-      <select name="type" value={form.type} onChange={handleChange} className="px-4 py-2 rounded border">
-        <option>Cash</option>
-        <option>Bank Transfer</option>
-        <option>Card</option>
-      </select>
-      <input name="transactionId" value={form.transactionId} onChange={handleChange} placeholder="Transaction ID" className="px-4 py-2 rounded border" />
-      <button type="submit" className="bg-blue-700 text-white font-bold py-2 rounded mt-2">Submit Payment</button>
-      {success && <div className="text-green-600 text-sm mt-2">{success}</div>}
-    </form>
+    return (
+      <form className="flex flex-col gap-5 w-full max-w-lg" onSubmit={handleSubmit}>
+        <select name="property" value={form.property} onChange={handleChange} required className="px-4 py-3 rounded-xl border border-blue-300 focus:ring-2 focus:ring-blue-400">
+          <option value="">Select Property</option>
+          {properties.map(p => <option key={p}>{p}</option>)}
+        </select>
+        <select name="tenant" value={form.tenant} onChange={handleChange} required className="px-4 py-3 rounded-xl border border-blue-300 focus:ring-2 focus:ring-blue-400">
+          <option value="">Select Tenant</option>
+          {tenants.map(t => <option key={t}>{t}</option>)}
+        </select>
+        <input name="amount" value={form.amount} onChange={handleChange} placeholder="Amount" type="number" required className="px-4 py-3 rounded-xl border border-blue-300 focus:ring-2 focus:ring-blue-400" />
+        <select name="type" value={form.type} onChange={handleChange} className="px-4 py-3 rounded-xl border border-blue-300 focus:ring-2 focus:ring-blue-400">
+          <option>Cash</option>
+          <option>Bank Transfer</option>
+          <option>Card</option>
+        </select>
+        <input name="transactionId" value={form.transactionId} onChange={handleChange} placeholder="Transaction ID" className="px-4 py-3 rounded-xl border border-blue-300 focus:ring-2 focus:ring-blue-400" />
+        <button type="submit" className="bg-blue-700 hover:bg-blue-800 transition text-white font-bold py-3 rounded-xl mt-2 shadow">Submit Payment</button>
+        {success && <div className="text-green-600 text-base mt-2 font-semibold">{success}</div>}
+      </form>
   );
 };
 
