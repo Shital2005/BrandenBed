@@ -32,7 +32,7 @@ built for **Brandenbed Living Spaces UG (haftungsbeschränkt)**.
 **Screenshots**
 
 **Landing Page**  
-![Landing Page Screenshot](https://github.com/YOUR-USERNAME/YOUR-REPO/assets/XXXXXX/landing.png)
+![Landing Page Screenshot](https://github.com/Shital2005/BrandenBed/blob/main/Screenshot%202025-09-02%20155530.png?raw=true)
 
 **Team Dashboard**  
 ![Dashboard Screenshot](https://github.com/YOUR-USERNAME/YOUR-REPO/assets/XXXXXX/dashboard.png)
