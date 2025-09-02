@@ -43,10 +43,11 @@ built as part of the selection task for **Brandenbed Living Spaces UG (haftungsb
 
 ## Running the Project
 
-### 1. Clone the repository
+1. Clone the repository
 ```bash
 git clone https://github.com/YOUR-USERNAME/brandenbed-prototype.git
 cd brandenbed-prototype
+
 
 ### 2. Install dependencies
 Frontend and backend are separate:
