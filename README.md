@@ -1,7 +1,8 @@
 # Brandenbed Living Spaces – Prototype
 
-Full-stack prototype for a **customer landing page** and **internal team dashboard**,  
-built for **Brandenbed Living Spaces UG (haftungsbeschränkt)**.
+A **full-stack web prototype** for a **customer-facing landing page** and **internal team dashboard**,  
+designed and developed for **Brandenbed Living Spaces UG (haftungsbeschränkt)** to demonstrate  
+core features, design direction, and dashboard workflows.
 
 ---
 
@@ -39,6 +40,29 @@ built for **Brandenbed Living Spaces UG (haftungsbeschränkt)**.
 
 ---
 
+**API Endpoints**
+
+**Properties**  
+- `GET /api/properties` → Returns list of properties  
+
+**Employees**  
+- `GET /api/employees` → Returns employee data  
+
+**Payments**  
+- `GET /api/payments` → Returns list of payments  
+- `POST /api/payments` → Accepts new payment (dummy endpoint)  
+
+**Tenant Queries**  
+- `GET /api/queries` → Returns list of tenant queries  
+
+**Tasks**  
+- `GET /api/tasks` → Returns list of tasks  
+
+**Tenants**  
+- `GET /api/tenants` → Returns list of tenants  
+
+---
+
 **Running the project**
 
 **1. Clone the repository** 
@@ -65,6 +89,18 @@ npm start
 cd client
 npm start
 ```
+
+**Future Improvements**  
+- Add authentication (JWT or OAuth)  
+- Connect to a real database (MongoDB/PostgreSQL)  
+- Make dashboard charts dynamic  
+- Implement language translation toggle
+
+**Contributing**  
+1. Fork the repository  
+2. Create a feature branch (`git checkout -b feature-name`)  
+3. Commit changes (`git commit -m "Added new feature"`)  
+4. Push and open a Pull Request  
 
 
 
