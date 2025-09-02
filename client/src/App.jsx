@@ -9,6 +9,8 @@ import DashboardLayout from './Dashboard/pages/DashboardLayout';
 import DashboardHome from './Dashboard/pages/DashboardHome';
 import RentCollectionPage from './Dashboard/pages/RentCollectionPage';
 import TenantQueriesPage from './Dashboard/pages/TenantQueriesPage.jsx';
+import TasksPage from './Dashboard/pages/TasksPage.jsx';
+import SettingsPage from './Dashboard/pages/SettingsPage.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -27,7 +29,8 @@ function App() {
           <Route path="tenant-queries" element={<TenantQueriesPage />} />
           <Route path="properties" element={<PropertiesPage />} />
           <Route path="employees" element={<EmployeesPage />} />
-          <Route path="settings" element={<div>Settings (to implement)</div>} />
+          <Route path="tasks" element={<TasksPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Routes>
     </Router>

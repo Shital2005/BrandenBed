@@ -33,20 +33,20 @@ const TasksPage = () => {
           <thead>
             <tr className="bg-yellow-400">
               <th className="py-3 px-4 text-black font-bold">Title</th>
-              <th className="py-3 px-4 text-black font-bold">Status</th>
               <th className="py-3 px-4 text-black font-bold">Assigned To</th>
+                <th className="py-3 px-4 text-black font-bold">Status</th>
             </tr>
           </thead>
           <tbody>
-            {tasks.map(task => (
-              <tr key={task.id} className="border-t hover:bg-yellow-50 transition">
-                <td className="py-3 px-4 font-medium text-blue-900">{task.title}</td>
-                <td className="py-3 px-4">
-                  <span className={`px-3 py-1 rounded-xl font-bold text-sm shadow ${statusColors[task.status]}`}>{task.status}</span>
-                </td>
-                <td className="py-3 px-4">{task.assignedTo}</td>
-              </tr>
-            ))}
+              {tasks.map(task => (
+                <tr key={task.id} className="border-t hover:bg-yellow-50 transition">
+                  <td className="py-3 px-4 font-medium text-blue-900">{task.title}</td>
+                  <td className="py-3 px-4">{task.assignedTo}</td>
+                  <td className="py-3 px-4">
+                    <span className={`px-3 py-1 rounded-xl font-bold text-sm shadow ${statusColors[task.status]}`}>{task.status}</span>
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
