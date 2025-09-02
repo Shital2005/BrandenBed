@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LandingPage from './pages/LandingPage.jsx';
 import PropertiesPage from './Dashboard/pages/PropertiesPage.jsx';
+import Properties from './pages/Properties.jsx';
 import PropertyDetails from './pages/PropertyDetails.jsx';
 import AboutUs from './pages/AboutUs';
 import SignIn from './pages/SignIn.jsx';
@@ -19,7 +20,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage lang={lang} setLang={setLang} />} />
-        <Route path="/properties" element={<PropertiesPage />} />
+  <Route path="/properties" element={<Properties />} />
         <Route path="/property/:id" element={<PropertyDetails />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/signin" element={<SignIn lang={lang} setLang={setLang} />} />
