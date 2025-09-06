@@ -2,7 +2,7 @@
   "name": "brandenbed-client",
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://shital2005.github.io/BrandenBed/",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
