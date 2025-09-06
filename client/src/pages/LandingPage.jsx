@@ -11,7 +11,8 @@ function LandingPage({ lang, setLang }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/landing')
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+    fetch(`${apiBaseUrl}/api/landing`)
       .then(res => res.json())
       .then(data => {
         setLandingData(data);

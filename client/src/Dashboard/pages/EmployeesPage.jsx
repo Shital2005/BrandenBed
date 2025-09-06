@@ -11,7 +11,8 @@ const EmployeesPage = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await fetch("/api/employees");
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+  const res = await fetch(`${apiBaseUrl}/api/employees`);
         if (res.ok) {
           const data = await res.json();
           setEmployees(data);

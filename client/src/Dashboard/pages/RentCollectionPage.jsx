@@ -10,7 +10,8 @@ function RentCollectionPage() {
   React.useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const res = await fetch("/api/payments");
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+  const res = await fetch(`${apiBaseUrl}/api/payments`);
         if (res.ok) {
           const data = await res.json();
           setPayments(data);

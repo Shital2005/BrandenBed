@@ -8,8 +8,9 @@ function Properties() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-  fetch('http://localhost:5000/api/properties')
-  .then(res => res.json())
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+    fetch(`${apiBaseUrl}/api/properties`)
+      .then(res => res.json())
       .then(data => {
         setProperties(data);
         setLoading(false);

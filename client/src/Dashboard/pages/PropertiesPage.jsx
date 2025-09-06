@@ -17,7 +17,8 @@ const PropertiesPage = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const res = await fetch("/api/properties");
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+  const res = await fetch(`${apiBaseUrl}/api/properties`);
         if (res.ok) {
           const data = await res.json();
           setProperties(data);

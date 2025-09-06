@@ -16,7 +16,8 @@ const PaymentForm = () => {
     setSuccess("");
     setError("");
     try {
-      const res = await fetch("/api/payments", {
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+  const res = await fetch(`${apiBaseUrl}/api/payments`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form)

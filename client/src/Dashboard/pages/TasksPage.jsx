@@ -14,7 +14,8 @@ const TasksPage = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await fetch("/api/tasks");
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+  const res = await fetch(`${apiBaseUrl}/api/tasks`);
         if (res.ok) {
           const data = await res.json();
           setTasks(data);
