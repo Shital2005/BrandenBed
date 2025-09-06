@@ -8,7 +8,7 @@ function Properties() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/properties')
+    fetch('https://brandenbed-1x55.onrender.com/api/properties')
       .then(res => res.json())
       .then(data => {
         setProperties(data);
